@@ -26,4 +26,5 @@ jobs:
         context: ./project
         file: ./project/Dockerfile
         push: true
-        tags: enmanueldeabreug/techtrends:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends:latest
+        # The username should match exactly what's shown in your DockerHub profile
