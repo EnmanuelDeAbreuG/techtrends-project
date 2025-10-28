@@ -33,4 +33,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends-project:latest
+        tags: ${{ env.DOCKER_USERNAME }}/techtrends-project:latest
