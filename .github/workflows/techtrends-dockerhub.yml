@@ -20,7 +20,7 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v1
       with:
-        username: emmanueldeabreu
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         
     - name: Build and push
@@ -29,4 +29,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: emmanueldeabreu/techtrends-project:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends-project:latest
