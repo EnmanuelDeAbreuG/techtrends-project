@@ -23,7 +23,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
-        context: ./project
-        file: ./project/Dockerfile
+        context: .
+        file: ./Dockerfile
         push: true
-        tags: emmanueldeabreu/techtrends-project:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends-project:latest
