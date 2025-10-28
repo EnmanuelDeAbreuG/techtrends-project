@@ -7,8 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
 
     steps:
     - uses: actions/checkout@v2
@@ -28,4 +26,4 @@ jobs:
         context: ./project
         file: ./project/Dockerfile
         push: true
-        tags: ${{ env.DOCKER_USERNAME }}/techtrends:latest
+        tags: emmanueldeabreu/techtrends-project:latest
