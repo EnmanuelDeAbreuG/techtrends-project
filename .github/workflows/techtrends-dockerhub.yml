@@ -7,10 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DOCKER_IMAGE: techtrends-project
-      DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -33,4 +29,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ env.DOCKER_USERNAME }}/techtrends-project:latest
+        tags: emmanueldeabreu/techtrends-project:latest
