@@ -26,4 +26,4 @@ jobs:
         context: ./project
         file: ./project/Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/techtrends:latest
+        tags: enmanueldeabreug/techtrends:latest
